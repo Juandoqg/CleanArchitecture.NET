@@ -8,6 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NewFolder1\**" />
+    <Compile Remove="NewFolder\**" />
+    <Content Remove="NewFolder1\**" />
+    <Content Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder1\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder1\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.11" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
@@ -15,7 +28,10 @@
   <ItemGroup>
     <ProjectReference Include="..\CL-ApplicationLayer\CL-ApplicationLayer.csproj" />
     <ProjectReference Include="..\CL-EnterpriseLayer\CL-EnterpriseLayer.csproj" />
+    <ProjectReference Include="..\CL-FrameworksDrivers-ExternalService\CL-FrameworksDrivers-ExternalService.csproj" />
+    <ProjectReference Include="..\CL-InterfaceAdapters-Adapters\CL-InterfaceAdapters-Adapters.csproj" />
     <ProjectReference Include="..\CL-InterfaceAdapters-Data\CL-InterfaceAdapters-Data.csproj" />
+    <ProjectReference Include="..\CL-InterfaceAdapters-Mappers\CL-InterfaceAdapters-Mappers.csproj" />
     <ProjectReference Include="..\CL-InterfaceAdapters-Models\CL-InterfaceAdapters-Models.csproj" />
     <ProjectReference Include="..\CL-InterfaceAdapters-Presenters\CL-InterfaceAdapters-Presenters.csproj" />
     <ProjectReference Include="..\CL-InterfaceAdapters-Repository\CL-InterfaceAdapters-Repository.csproj" />

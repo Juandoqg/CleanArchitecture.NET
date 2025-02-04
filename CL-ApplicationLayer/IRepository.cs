@@ -13,6 +13,6 @@ namespace CL_ApplicationLayer
 
         Task < IEnumerable<T>> GetAllAsync();
 
-        Task AddAsync(Beer beer);
+        Task AddAsync(T beer);
     }
 }
